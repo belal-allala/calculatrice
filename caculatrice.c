@@ -59,17 +59,12 @@ int main() {
             float note, somme = 0, moyenne;
             printf("Entrez le nombre de notes : ");
             scanf("%d", &nombre_notes);
-
             for (i = 1; i <= nombre_notes; i++) {
-                
                 printf("Entrez la note %d : ", i);
                 scanf("%f", &note);
                 somme += note ;
-                
             }
-
             moyenne = somme / nombre_notes;
-
             printf("%.2f\n", moyenne);
             break;
         case 6:
@@ -77,6 +72,7 @@ int main() {
             scanf("%lf", &N1);
             R = abs(N1);
             printf("%.2lf\n", R);
+            break;
         case 7:
             printf("Entrez la base : ");
             scanf("%lf", &N1);
@@ -84,18 +80,18 @@ int main() {
             scanf("%lf", &N2);
             R = pow(N1,N2);
             printf("%.2lf",R);
+            break;
         case 8:
             double  racine;
-
             printf("Entrez un nombre positif : ");
             scanf("%lf", &N1);
-
             if (N1 < 0) {
                 printf("La racine carrée d'un nombre négatif n'est pas définie.\n");
             } else {
                 racine = sqrt(N1);
                 printf("%.2lf\n", racine);
             }
+            break;
         default:
                 printf("Choix n'est pas valide.\n");
                 goto debut;
